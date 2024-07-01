@@ -1,7 +1,7 @@
 import socket
 #TCP
-s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-s.connect(('localhost', 12346877676775))
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+s.connect(('192.2.6.100', 12345))
 s.send("Hola, servidor".encode())
 response = s.recv(1024).decode()
 print(response)
