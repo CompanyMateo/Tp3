@@ -1,11 +1,13 @@
 import socket
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(('192.2.6.100',12345))
+s.bind(('192.2.6.101', 12345))
 s.listen()
 conn, addr = s.accept()
 data = conn.recv(1024)
-conn.sendall("Hola, client".encode())
+conn.sendall("Hola, cliente".encode())
+conn.close() 
+
 
 # UPD
 # s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
